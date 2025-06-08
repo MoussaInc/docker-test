@@ -1,8 +1,12 @@
 FROM python:3.9-slim
 
-RUN pip install pandas==2.0.3
+# D'abord installer numpy avec une version compatible
+RUN pip install numpy==1.23.5
 
-WORKDIR /app 
-COPY pipeline.py pipeline.py
+# Puis installer pandas avec la version correspondante
+RUN pip install pandas==1.5.3
 
-ENTRYPOINT ["python", "pipeline.py"] 
+WORKDIR /app
+COPY pipeline.py .
+
+ENTRYPOINT ["python", "pipeline.py"]
