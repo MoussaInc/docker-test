@@ -1,2 +1,43 @@
+# Fichiers sensibles à toujours ignorer
+*.key
+*.pem
+*.cert
+*.secret
+*.env
+.env*
+.env.local
+.env.development
+.env.test
+.env.production
+/vault/
+/credentials/
+
+# Clés SSH
+id_rsa*
+id_ed25519*
+*.pub
+known_hosts
+
+# Fichiers de configuration sensible
+config.yml
+secrets.json
+*.kdbx  # Fichiers KeePass
+
+# Dossiers système
+.DS_Store
+.idea/
+.vscode/
 __pycache__/
-.env
+*.py[cod]
+
+# Fichiers Docker
+docker-compose.override.yml
+.env.docker
+
+# Fichiers de cache et logs
+*.log
+*.tmp
+*.swp
+*.swo
+
+key-git
